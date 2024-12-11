@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validación Tarjeta de Crédito</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <style>/* Basic styling */
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #f4f4f4;
+          margin: 0;
+          padding: 0;
+        }
+        
+        .modal {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+        }
+        
+        .form {
+          background-color: white;
+          padding: 30px;
+          border-radius: 8px;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+          width: 400px;
+        }
+        
+        .input_container {
+          margin-bottom: 20px;
+        }
+        
+        .input_label {
+          display: block;
+          font-weight: bold;
+          margin-bottom: 5px;
+        }
+        
+        .input_field {
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          font-size: 16px;
+        }
+        
+        .split {
+          display: flex;
+          justify-content: space-between;
+        }
+        
+        .purchase--btn {
+          background-color: #4CAF50;
+          color: white;
+          border: none;
+          padding: 10px 20px;
+          width: 100%;
+          cursor: pointer;
+          border-radius: 4px;
+          font-size: 16px;
+        }
+        
+        .purchase--btn:hover {
+          background-color: #45a049;
+        }
+        
+        .separator {
+          text-align: center;
+          margin-top: 20px;
+        }
+        
+        .separator .line {
+          border: 1px solid #ddd;
+        }
+        
+        .payment--options {
+          display: flex;
+          justify-content: center;
+        }
+        
+        .payment--options button {
+          background-color: #179BD7;
+          color: white;
+          padding: 10px 20px;
+          cursor: pointer;
+          border: none;
+          border-radius: 4px;
+          font-size: 16px;
+        }
+        
+        .payment--options button:hover {
+          background-color: #0e7cb1;
+        }
+        </style>
+
+<div class="modal">
+  <form class="form" id="payment-form">
+    <div class="credit-card-info--form">
+      <div class="input_container">
+        <label class="input_label" for="cardholder-name">Card holder full name</label>
+        <input
+          placeholder="Enter your full name"
+          title="Inpit title"
+          name="cardholder-name"
+          type="text"
+          class="input_field"
+          id="cardholder-name"
+        />
+      </div>
+      <div class="input_container">
+        <label class="input_label" for="card-number">Card Number</label>
+        <input
+          placeholder="0000 0000 0000 0000"
+          title="Inpit title"
+          name="card-number"
+          type="text"
+          class="input_field"
+          id="card-number"
+        />
+      </div>
+      <div class="input_container">
+        <label class="input_label" for="expiry-cvv">Expiry Date / CVV</label>
+        <div class="split">
+          <input
+            placeholder="MM/YY"
+            title="Expiry Date"
+            name="expiry-date"
+            type="text"
+            class="input_field"
+            id="expiry-date"
+          />
+          <input
+            placeholder="CVV"
+            title="CVV"
+            name="cvv"
+            type="text"
+            class="input_field"
+            id="cvv"
+          />
+        </div>
+      </div>
+      <button type="submit" class="purchase--btn">Checkout</button>
+      <div class="separator">
+        <hr class="line" />
+        <p>or pay using e-wallet</p>
+        <hr class="line" />
+      </div>
+      <div class="payment--options">
+        <button type="button" name="paypal">Pay with PayPal</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
